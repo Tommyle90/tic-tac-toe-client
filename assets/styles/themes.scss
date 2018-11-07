@@ -1,0 +1,41 @@
+div.column {
+  align-items: center;
+  border: 5px solid $background-color;
+  color: $font-color;
+  display: grid;
+  height: 200px;
+  justify-content: center;
+}
+
+h1 {
+  color: $background-color;
+  text-align: center;
+}
+
+.row {
+  background-color: $white;
+}
+
+.grey {
+  background-color: $grey;
+}
+
+.teal {
+  background-color: $teal;
+}
+
+.error-message {
+  color: $red;
+}
+
+.success-message {
+  color: $green;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: $background;
+}

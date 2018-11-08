@@ -6,7 +6,6 @@ const onSignUp = (event) => {
   event.preventDefault()
   const userData = getFormFields(event.target)
   $(event.target).trigger('reset')
-  console.log('Hi')
   api.signUp(userData)
     .then(ui.signUpSuccess)
     .catch(ui.failure)

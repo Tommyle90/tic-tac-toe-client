@@ -1,6 +1,9 @@
+'use strict'
+
 const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
+const store = require('../store.js')
 
 const onGetGame = (event) => {
   event.preventDefault()
@@ -11,7 +14,6 @@ const onGetGame = (event) => {
 
 const onCreateGame = (event) => {
   event.preventDefault()
-  console.log(event)
   api.createGame()
     .then(ui.onCreateGameSuccess)
     .catch(ui.failure)
@@ -26,8 +28,24 @@ const onShowIndex = (event) => {
     .then(ui.gameIndexSuccess)
     .catch(ui.failure)
 }
+
+const player = 'X'
+
+const updateGame = (event) => {
+  event.preventDefault()
+  const data = $(event.target).data()
+  const id = data.cellIndex
+  console.log(id)
+  store.gameBoard[id] = player
+  console.log(store)
+  api.gameUpdate(id, player)
+    .then()
+    .catch()
+}
+
 module.exports = {
   onGetGame,
   onCreateGame,
-  onShowIndex
+  onShowIndex,
+  updateGame
 }

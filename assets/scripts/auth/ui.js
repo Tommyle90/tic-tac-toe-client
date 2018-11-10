@@ -1,3 +1,5 @@
+'use strict'
+
 const store = require('../store.js')
 
 const signUpSuccess = (signUpResponse) => {
@@ -7,7 +9,7 @@ const signUpSuccess = (signUpResponse) => {
   $('#change-password-form').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
-  $('#sign-in-form').addClass('hidden')
+  // $('#sign-in-form').addClass('hidden')
 }
 
 const failure = (failureResponse) => {

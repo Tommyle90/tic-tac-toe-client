@@ -1,4 +1,5 @@
 'use strict'
+
 const authEvents = require('./auth/events.js')
 const gameEvents = require('./games/events.js')
 //
@@ -10,4 +11,5 @@ $(() => {
   $('#get-games').on('click', gameEvents.onGetGame)
   $('#create-games').on('click', gameEvents.onCreateGame)
   $('#show-game-index').on('submit', gameEvents.onShowIndex)
+  $('.box').on('click', gameEvents.updateGame)
 })

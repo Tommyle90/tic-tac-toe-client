@@ -1,4 +1,6 @@
-// const store = require('../store.js')
+'use strict'
+
+const store = require('../store.js')
 
 const onGetGameSuccess = (gameSuccess) => {
   $('#message').html('Found Games Played!')
@@ -11,6 +13,8 @@ const failure = (failureResponse) => {
   $('#message').addClass('error-message')
 }
 const onCreateGameSuccess = (createGame) => {
+  store.games = createGame
+  console.log(store)
   $('#message').html('Started New Game')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')

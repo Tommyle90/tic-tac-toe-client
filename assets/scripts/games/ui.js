@@ -13,6 +13,8 @@ const failure = (failureResponse) => {
   $('#message').addClass('error-message')
 }
 const onCreateGameSuccess = (createGame) => {
+  store.over = createGame.game.over
+  store.games = createGame
   store.game = createGame.game.id
   store.cells = createGame.game.cells
   console.log('this is the create game store', store)
@@ -25,13 +27,9 @@ const gameIndexSuccess = (indexGame) => {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
-const moveUpdate = (updateMove) => {
-  $('#box').append('X')
-}
 module.exports = {
   failure,
   onGetGameSuccess,
   onCreateGameSuccess,
-  gameIndexSuccess,
-  moveUpdate
+  gameIndexSuccess
 }

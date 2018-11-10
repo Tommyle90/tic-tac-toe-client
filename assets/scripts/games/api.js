@@ -39,7 +39,7 @@ const gameIndex = (gameId) => {
   })
 }
 
-const gameUpdate = (index, value) => {
+const gameUpdate = (index, value, over) => {
   return $.ajax({
     method: 'PATCH',
     url: `https://tic-tac-toe-wdi.herokuapp.com/games/${store.game}`,
@@ -54,7 +54,7 @@ const gameUpdate = (index, value) => {
             'index': index,
             'value': value
           },
-          'over': false
+          'over': over
         }
       }
     )

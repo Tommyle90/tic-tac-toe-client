@@ -18,7 +18,6 @@ const onCreateGame = (event) => {
   api.createGame()
     .then(ui.onCreateGameSuccess)
     .catch(ui.failure)
-  store.over = false
 }
 
 const onShowIndex = (event) => {
@@ -36,14 +35,16 @@ const updateGame = (event) => {
   const data = $(event.target).data()
   const id = data.cellIndex
   const player = store.player
-  store.cells[id] = player
-  console.log(store)
+  console.log(id, player)
+  // console.log(store)
   api.gameUpdate(id, player)
     .then()
-    .catch()
+    .catch(ui.failure)
+  gameLogic.gameBoard(id, player)
   gameLogic.switchPlayer(player)
   gameLogic.winCombo(store.cells)
-  gameLogic.turnOfGame(store.over)
+  console.log(store)
+  // gameLogic.turnOfGame(store.over)
 }
 
 module.exports = {

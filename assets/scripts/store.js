@@ -4,10 +4,13 @@ const store = {
 }
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
-const games = {
-}
+const player = 'X'
+
+const over = false
+
 module.exports = {
   store,
   gameBoard,
-  games
+  player,
+  over
 }

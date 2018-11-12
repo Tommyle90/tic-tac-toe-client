@@ -21,15 +21,19 @@ const onCreateGameSuccess = (createGame) => {
   $('#message').html('Started New Game')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('.box').html('')
 }
-const gameIndexSuccess = (indexGame) => {
-  $('#message').html('Game ID')
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
+const onUpdateGameSuccess = (data) => {
+  if (store.player === 'X' && store.over === false && store.cells[data] === '') {
+    $(event.target).html('X')
+  } else if (store.player === 'O' && store.over === false && store.cells[data] === '') {
+    $(event.target).html('O')
+  }
 }
+
 module.exports = {
   failure,
   onGetGameSuccess,
   onCreateGameSuccess,
-  gameIndexSuccess
+  onUpdateGameSuccess
 }

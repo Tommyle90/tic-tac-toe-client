@@ -27,18 +27,6 @@ const createGame = (inputData) => {
   })
 }
 
-const gameIndex = (gameId) => {
-  return $.ajax({
-    method: 'GET',
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games/' + gameId.game.id,
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    },
-    contentType: 'application/json',
-    data: JSON.stringify(gameId)
-  })
-}
-
 const gameUpdate = (index, value, over) => {
   return $.ajax({
     method: 'PATCH',
@@ -63,6 +51,5 @@ const gameUpdate = (index, value, over) => {
 module.exports = {
   getGame,
   createGame,
-  gameIndex,
   gameUpdate
 }

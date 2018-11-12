@@ -2,7 +2,7 @@
 
 const api = require('./api.js')
 const ui = require('./ui.js')
-const getFormFields = require('../../../lib/get-form-fields')
+// const getFormFields = require('../../../lib/get-form-fields')
 const store = require('../store.js')
 const gameLogic = require('./gameLogic.js')
 
@@ -20,27 +20,18 @@ const onCreateGame = (event) => {
     .catch(ui.failure)
 }
 
-const onShowIndex = (event) => {
-  event.preventDefault()
-  const gameData = getFormFields(event.target)
-  $(event.target).trigger('reset')
-  console.log(gameData)
-  api.gameIndex(gameData)
-    .then(ui.gameIndexSuccess)
-    .catch(ui.failure)
-}
-
 const updateGame = (event) => {
   event.preventDefault()
-  const data = $(event.target).data()
-  const id = data.cellIndex
+  const data = $(event.target).data().cellIndex
+  // const id = $(event.target).data().cellIndex
   const player = store.player
-  console.log(id, player)
+  const over = store.over
+  console.log(data, player)
   // console.log(store)
-  api.gameUpdate(id, player)
-    .then()
+  api.gameUpdate(data, player)
+    .then(ui.onUpdateGameSuccess(data))
     .catch(ui.failure)
-  gameLogic.gameBoard(id, player)
+  gameLogic.gameBoard(data, player, over)
   gameLogic.switchPlayer(player)
   gameLogic.winCombo(store.cells)
   console.log(store)
@@ -50,6 +41,5 @@ const updateGame = (event) => {
 module.exports = {
   onGetGame,
   onCreateGame,
-  onShowIndex,
   updateGame
 }

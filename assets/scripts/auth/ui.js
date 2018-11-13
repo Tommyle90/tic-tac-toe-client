@@ -28,16 +28,15 @@ const signInSuccess = (signInResponse) => {
   $('#sign-out').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
-  $('.box').empty()
   $('#sign-up-form').fadeOut(50)
   $('#sign-in-form').fadeOut(50)
   $('#sign-out-btn').show()
   $('#change-pass-btn').show()
   $('#sign-up-btn').hide()
   $('#sign-in-btn').hide()
-  $('.game-container').show()
   $('#get-games').show()
   $('#create-games').show()
+  $('.box').empty()
 }
 //
 const changePasswordSuccess = (changePasswordResponse) => {
@@ -69,7 +68,7 @@ const onSignOutSuccess = (signOutResponse) => {
   $('#get-games').hide()
   $('#create-games').hide()
   $('#change-password-form').trigger('reset')
-  $('.box').empty()
+  $('.box').trigger('reset')
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 1000)

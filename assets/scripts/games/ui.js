@@ -25,6 +25,7 @@ const onCreateGameSuccess = (createGame) => {
   $('#message-box').html(`Player: ${store.player}'s Turn`)
   $('#message-box').addClass('success-message')
   $('#message-box').removeClass('error-message')
+  $('.game-container').show()
 }
 const onUpdateGameSuccess = (data) => {
   if (store.player === 'X' && store.over === false && store.cells[data] === '') {

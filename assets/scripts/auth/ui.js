@@ -29,8 +29,8 @@ const signInSuccess = (signInResponse) => {
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
   $('.box').empty()
-  $('#sign-up-form').slideUp(500)
-  $('#sign-in-form').slideUp(500)
+  $('#sign-up-form').slideUp(50)
+  $('#sign-in-form').slideUp(50)
   $('#sign-out-btn').show()
   $('#change-pass-btn').show()
   $('#sign-up-btn').hide()
@@ -69,6 +69,9 @@ const onSignOutSuccess = (signOutResponse) => {
   $('.game-container').hide()
   $('#get-games').hide()
   $('#create-games').hide()
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 1000)
 }
 module.exports = {
   signUpSuccess,

@@ -79,6 +79,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: 20px;
+  height: 150px;
   #message{
     margin: 10px 10px;
   }
@@ -100,31 +101,31 @@ body {
     display: none;
   }
 }
-
-footer {
-text-transform: uppercase;
-padding: 0 20px;
-background-color: $footer;
-color: $white;
-font-size: 14px;
-letter-spacing: .08em;
-font-weight: 500;
-bottom: 0;
-position: absolute;
-width: 100%;
-text-align: center;
-}
-
-.clearfix:after {
-visibility: hidden;
-display: block;
-content: ' ';
-clear: both;
-height: 0;
-font-size: 0;
-}
-
-.name{
-	color: $name;
-	font-weight: 700;
-}
+//
+// footer {
+// text-transform: uppercase;
+// padding: 0 20px;
+// background-color: $footer;
+// color: $white;
+// font-size: 14px;
+// letter-spacing: .08em;
+// font-weight: 500;
+// bottom: 0;
+// position: absolute;
+// width: 100%;
+// text-align: center;
+// }
+//
+// .clearfix:after {
+// visibility: hidden;
+// display: block;
+// content: ' ';
+// clear: both;
+// height: 0;
+// font-size: 0;
+// }
+//
+// .name{
+// 	color: $name;
+// 	font-weight: 700;
+// }

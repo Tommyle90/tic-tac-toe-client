@@ -69,6 +69,7 @@ const onSignOutSuccess = (signOutResponse) => {
   $('.game-container').hide()
   $('#get-games').hide()
   $('#create-games').hide()
+  $('#change-password-form').trigger('reset')
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 1000)

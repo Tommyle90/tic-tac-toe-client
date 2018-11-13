@@ -14,29 +14,29 @@ $(() => {
 })
 
 $('#game-container').click(function () {
-  $('#sign-up-form').slideUp(500)
-  $('#sign-in-form').slideUp(500)
-  $('#change-password-form').slideUp(500)
+  $('#sign-up-form').fadeOut(500)
+  $('#sign-in-form').fadeOut(500)
+  $('#change-password-form').fadeOut(500)
   $('#message').show(500)
 })
 
 $('#sign-up-btn').click(function () {
-  $('#sign-up-form').slideDown(500)
-  $('#sign-in-form').slideUp(500)
-  $('#change-password-form').slideUp(500)
+  $('#sign-up-form').fadeIn(500)
+  $('#sign-in-form').fadeOut(500)
+  $('#change-password-form').fadeOut(500)
   $('#message').show(500)
 })
 
 $('#sign-in-btn').click(function () {
-  $('#sign-in-form').slideDown(500)
-  $('#sign-up-form').slideUp(500)
-  $('#change-password-form').slideUp(500)
+  $('#sign-in-form').fadeIn(500)
+  $('#sign-up-form').fadeOut(500)
+  $('#change-password-form').fadeOut(500)
   $('#message').show(500)
 })
 
 $('#change-pass-btn').click(function () {
-  $('#change-password-form').slideDown(500)
-  $('#sign-up-form').slideUp(500)
-  $('#sign-in-form').slideUp(500)
+  $('#change-password-form').fadeIn(500)
+  $('#sign-up-form').fadeOut(500)
+  $('#sign-in-form').fadeOut(500)
   $('#message').show(500)
 })

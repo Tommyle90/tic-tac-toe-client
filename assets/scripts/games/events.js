@@ -18,6 +18,9 @@ const onCreateGame = (event) => {
   api.createGame()
     .then(ui.onCreateGameSuccess)
     .catch(ui.failure)
+  // $('#message-box').html(`Player: ${store.player}'s Turn`)
+  // $('#message-box').addClass('success-message')
+  // $('#message-box').removeClass('error-message')
 }
 
 const updateGame = (event) => {

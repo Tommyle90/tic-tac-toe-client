@@ -1,36 +1,37 @@
-div.box {
-  align-items: center;
-  border: 5px solid $background-color;
-  color: $font-color;
+.game-container {
+  display: none;
+  margin: 120px auto 0;
+}
+
+.gameboard {
   display: grid;
-  height: 200px;
-  justify-content: center;
-  font-size: 35px;
-}
-
-h1 {
-  color: $background-color;
-  text-align: center;
-}
-
-.row {
+  width: 310px;
+  height: 310px;
+  margin: 0 auto;
   background-color: $white;
+  border: 4px solid $grey;
+  border-radius: 10px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-.grey {
-  background-color: $grey;
-}
-
-.teal {
-  background-color: $teal;
+.box {
+  border: 2px solid $grey;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  &:hover {
+    background-color: $hover;
+  }
 }
 
 .error-message {
-  color: $red;
+  color: $white;
 }
 
 .success-message {
-  color: $green;
+  color: $white;
 }
 
 .hidden {
@@ -39,4 +40,63 @@ h1 {
 
 body {
   background-color: $background;
+}
+
+#sign-out-btn {
+  display: none;
+  margin: 0 auto;
+}
+
+#change-pass-btn {
+  display: none;
+  margin: 0 auto;
+}
+
+.forms {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  #sign-up-form {
+    display: none;
+    margin: 0 auto;
+  }
+    #sign-in-form {
+      display: none;
+      margin: 0 auto;
+    }
+    #change-password-form {
+        display: none;
+        margin: 0 auto;
+    }
+}
+
+.messagegrid {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 25px;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  #message{
+    margin: 10px 10px;
+  }
+  #message-box {
+    margin: 10px 10px;
+  }
+}
+
+.bottom-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  #get-games {
+    display: none;
+  }
+  #create-games {
+    display: none;
+  }
 }

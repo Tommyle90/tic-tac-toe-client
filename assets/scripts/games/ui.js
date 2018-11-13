@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const onGetGameSuccess = (gameSuccess) => {
-  $('#message').text(`Total games played: ${gameSuccess.games.length}`)
+  $('#message').html(`Total games played: ${gameSuccess.games.length}`)
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
@@ -21,7 +21,10 @@ const onCreateGameSuccess = (createGame) => {
   $('#message').html('Started New Game')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
-  $('.box').html('')
+  $('.box').empty()
+  $('#message-box').html(`Player: ${store.player}'s Turn`)
+  $('#message-box').addClass('success-message')
+  $('#message-box').removeClass('error-message')
 }
 const onUpdateGameSuccess = (data) => {
   if (store.player === 'X' && store.over === false && store.cells[data] === '') {

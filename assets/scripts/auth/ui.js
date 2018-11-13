@@ -9,7 +9,8 @@ const signUpSuccess = (signUpResponse) => {
   $('#change-password-form').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
-  // $('#sign-in-form').addClass('hidden')
+  $('#sign-up-form').slideUp(500)
+  $('.box').empty()
 }
 
 const failure = (failureResponse) => {
@@ -27,12 +28,24 @@ const signInSuccess = (signInResponse) => {
   $('#sign-out').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
+  $('.box').empty()
+  $('#sign-up-form').slideUp(500)
+  $('#sign-in-form').slideUp(500)
+  $('#sign-out-btn').show()
+  $('#change-pass-btn').show()
+  $('#sign-up-btn').hide()
+  $('#sign-in-btn').hide()
+  $('.game-container').show()
+  $('#get-games').show()
+  $('#create-games').show()
 }
 //
 const changePasswordSuccess = (changePasswordResponse) => {
   $('#message').html('You changed your password successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('#change-password-form').slideUp(500)
+  $('.box').empty()
 }
 
 const onSignOutSuccess = (signOutResponse) => {
@@ -43,6 +56,19 @@ const onSignOutSuccess = (signOutResponse) => {
   $('#sign-out').addClass('hidden')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
+  $('.box').empty()
+  $('#message-box').empty()
+  $('#sign-out-btn').hide()
+  $('#change-pass-btn').hide()
+  $('#sign-up-form').slideUp(500)
+  $('#sign-in-form').slideUp(500)
+  $('#change-password-form').slideUp(500)
+  $('#sign-up-btn').show()
+  $('#sign-in-btn').show()
+  $('#bottom-btn').hide()
+  $('.game-container').hide()
+  $('#get-games').hide()
+  $('#create-games').hide()
 }
 module.exports = {
   signUpSuccess,

@@ -29,7 +29,7 @@ const updateGame = (event) => {
   // const id = $(event.target).data().cellIndex
   const player = store.player
   const over = store.over
-  console.log(data, player)
+  // console.log(data, player)
   // console.log(store)
   api.gameUpdate(data, player)
     .then(ui.onUpdateGameSuccess(data))
@@ -37,10 +37,9 @@ const updateGame = (event) => {
   gameLogic.gameBoard(data, player, over)
   gameLogic.switchPlayer(player)
   gameLogic.winCombo(store.cells)
-  console.log(store)
+  // console.log(store)
   // gameLogic.turnOfGame(store.over)
 }
-
 module.exports = {
   onGetGame,
   onCreateGame,

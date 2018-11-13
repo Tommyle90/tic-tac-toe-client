@@ -7,7 +7,7 @@ const gameBoard = (id, value, over) => {
   }
   if (store.cells[id] === '') {
     store.cells[id] = value
-    console.log('Click')
+    // console.log('Click')
     store.misclick = 'click'
   } else if (store.cells[id] === 'X' || 'O') {
     $('#message').html('Misclick')
@@ -48,7 +48,7 @@ const winCombo = (gameboard) => {
     store.over = true
     store.player = 'X'
     store.winner = 'X'
-    console.log('X wins the game')
+    // console.log('X wins the game')
     $('#message-box').html('X wins!')
   } else if ((gameboard[0] === 'O' && gameboard[1] === 'O' && gameboard[2] === 'O') ||
 (gameboard[3] === 'O' && gameboard[4] === 'O' && gameboard[5] === 'O') ||
@@ -62,7 +62,7 @@ const winCombo = (gameboard) => {
     store.over = true
     store.player = 'X'
     store.winner = 'O'
-    console.log('O wins the game')
+    // console.log('O wins the game')
     $('#message-box').html('O wins!')
   } else if (gameboard[0] !== '' && gameboard[1] !== '' && gameboard[2] !== '' &&
   gameboard[3] !== '' && gameboard[4] !== '' && gameboard[5] !== '' &&
@@ -71,7 +71,7 @@ const winCombo = (gameboard) => {
     store.over = true
     store.player = 'X'
     store.winner = 'Tie'
-    console.log('Tie Game')
+    // console.log('Tie Game')
     $('#message-box').html('Tie Game!')
   }
 }

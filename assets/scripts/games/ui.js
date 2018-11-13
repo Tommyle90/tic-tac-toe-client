@@ -17,7 +17,7 @@ const onCreateGameSuccess = (createGame) => {
   store.games = createGame
   store.game = createGame.game.id
   store.cells = createGame.game.cells
-  console.log('this is the create game store', store)
+  // console.log('this is the create game store', store)
   $('#message').html('Started New Game')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')

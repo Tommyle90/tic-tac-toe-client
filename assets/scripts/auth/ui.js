@@ -9,7 +9,7 @@ const signUpSuccess = (signUpResponse) => {
   $('#change-password-form').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
-  $('#sign-up-form').slideUp(500)
+  $('#sign-up-form').fadeOut(500)
   $('.box').empty()
 }
 

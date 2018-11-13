@@ -56,7 +56,6 @@ const onSignOutSuccess = (signOutResponse) => {
   $('#sign-out').addClass('hidden')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
-  $('.box').empty()
   $('#message-box').empty()
   $('#sign-out-btn').hide()
   $('#change-pass-btn').hide()
@@ -70,6 +69,7 @@ const onSignOutSuccess = (signOutResponse) => {
   $('#get-games').hide()
   $('#create-games').hide()
   $('#change-password-form').trigger('reset')
+  $('.box').empty()
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 1000)

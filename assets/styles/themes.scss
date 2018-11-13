@@ -71,7 +71,6 @@ body {
 }
 
 .messagegrid {
-  // position: absolute;
   display: flex;
   align-items: center;
   width: 100%;
@@ -80,13 +79,12 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: 20px;
+  height: 150px;
   #message{
     margin: 10px 10px;
-    // position: absolute;
   }
   #message-box {
     margin: 10px 10px;
-    // position: absolute;
   }
 }
 
@@ -116,8 +114,11 @@ body {
 // position: absolute;
 // width: 100%;
 // text-align: center;
+<<<<<<< HEAD
 // display: flex;
 // flex-shrink: 0;
+=======
+>>>>>>> feature
 // }
 //
 // .clearfix:after {

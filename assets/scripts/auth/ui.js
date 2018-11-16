@@ -34,6 +34,10 @@ const signInSuccess = (signInResponse) => {
   $('#change-pass-btn').show()
   $('#sign-up-btn').hide()
   $('#sign-in-btn').hide()
+<<<<<<< HEAD
+=======
+  $('.game-container').hide()
+>>>>>>> feature
   $('#get-games').show()
   $('#create-games').show()
   $('.box').empty()

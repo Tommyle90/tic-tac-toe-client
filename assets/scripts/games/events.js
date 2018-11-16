@@ -37,7 +37,7 @@ const updateGame = (event) => {
   gameLogic.gameBoard(data, player, over)
   gameLogic.switchPlayer(player)
   gameLogic.winCombo(store.cells)
-  console.log(store.cells)
+  // console.log(store.cells)
   // gameLogic.turnOfGame(store.over)
 }
 module.exports = {

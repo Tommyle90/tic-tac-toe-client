@@ -34,6 +34,7 @@ const onUpdateGameSuccess = (data) => {
   } else if (store.player === 'O' && store.over === false && store.cells[data] === '') {
     $(event.target).html('O')
   }
+  $('#change-password-form').fadeOut(500)
 }
 
 module.exports = {

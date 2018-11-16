@@ -17,6 +17,7 @@ const onCreateGameSuccess = (createGame) => {
   store.games = createGame
   store.game = createGame.game.id
   store.cells = createGame.game.cells
+  store.player = 'X'
   // console.log('this is the create game store', store)
   $('#message').html('Started New Game')
   $('#message').addClass('success-message')
@@ -34,7 +35,6 @@ const onUpdateGameSuccess = (data) => {
   } else if (store.player === 'O' && store.over === false && store.cells[data] === '') {
     $(event.target).html('O')
   }
-  $('#change-password-form').fadeOut(500)
 }
 
 module.exports = {

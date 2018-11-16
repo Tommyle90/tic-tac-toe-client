@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tommy's TIC TAC TOE GAME</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+          <span class="navbar-brand mb-0 h1">TIC TAC TOE Game</span>
+          <form class='form-inline'>
+            <button type="button" id ="sign-up-btn" class="btn btn-secondary">Sign Up</button>
+            <button type="button" id ="sign-in-btn" class="btn btn-secondary">Sign In</button>
+            <button type="button" id ="sign-out-btn" class="btn btn-secondary">Sign Out</button>
+            <button type="button" id ="change-pass-btn" class="btn btn-secondary">Change Password</button>
+          </form>
+        </nav>
+      <!-- <div class='messagegrid'>
+        <div id="message"></div>
+        <div id='message-box'></div>
+      </div> -->
+  <div class="forms" id="forms">
+        <form id="sign-up-form">
+          <legend>Sign-Up Form</legend>
+          <input name="credentials[email]" type="email" placeholder="email">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+          <input type="submit">
+        </form>
+
+        <form id="sign-in-form">
+          <legend>Sign-In Form</legend>
+          <input name="credentials[email]" type="email" placeholder="email">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <input type="submit">
+        </form>
+
+        <form id="change-password-form" class="hidden">
+          <legend>Change Password Form</legend>
+          <input name="passwords[old]" type="password" placeholder="old password">
+          <input name="passwords[new]" type="password" placeholder="new password">
+          <input type="submit">
+        </form>
+    </div>
+      <!-- <button id="sign-out" class="hidden">Sign Out</button> -->
+
+  <div class="game-container">
+      <div class="gameboard">
+            <div class="box" data-cell-index="0"></div>
+            <div class="box" data-cell-index="1"></div>
+            <div class="box" data-cell-index="2"></div>
+            <div class="box" data-cell-index="3"></div>
+            <div class="box" data-cell-index="4"></div>
+            <div class="box" data-cell-index="5"></div>
+            <div class="box" data-cell-index="6"></div>
+            <div class="box" data-cell-index="7"></div>
+            <div class="box" data-cell-index="8"></div>
+      </div>
+    </div>
+    <div class='bottom-btn'>
+      <button id='get-games'>Total Games</button>
+      <button id='create-games'>Start New Game</button>
+    </div>
+
+    <div class='messagegrid'>
+      <div id="message"></div>
+      <div id='message-box'></div>
+    </div>
+    </body>
+</html>

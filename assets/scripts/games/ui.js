@@ -25,6 +25,7 @@ const onCreateGameSuccess = (createGame) => {
   $('#message-box').html(`Player: ${store.player}'s Turn`)
   $('#message-box').addClass('success-message')
   $('#message-box').removeClass('error-message')
+  $('#change-password-form').fadeOut(500)
   $('.game-container').show()
 }
 const onUpdateGameSuccess = (data) => {

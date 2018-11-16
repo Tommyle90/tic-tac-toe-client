@@ -4,11 +4,11 @@
 
 * HTML
 * CSS
-* JAVASCRIPT
-* JQUERY
-* AJAX
-* BOOTSTRAP
-* SASS
+* Javascript
+* jQuery
+* ajax
+* Bootstrap
+* Sass
 * API
 
 ## Wireframe and User Stories:

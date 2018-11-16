@@ -25,6 +25,7 @@ const onCreateGameSuccess = (createGame) => {
   $('#message-box').html(`Player: ${store.player}'s Turn`)
   $('#message-box').addClass('success-message')
   $('#message-box').removeClass('error-message')
+  $('#change-password-form').trigger('reset')
   $('#change-password-form').fadeOut(500)
   $('.game-container').show()
 }
@@ -34,6 +35,7 @@ const onUpdateGameSuccess = (data) => {
   } else if (store.player === 'O' && store.over === false && store.cells[data] === '') {
     $(event.target).html('O')
   }
+  $('#change-password-form').trigger('reset')
   $('#change-password-form').fadeOut(500)
 }
 

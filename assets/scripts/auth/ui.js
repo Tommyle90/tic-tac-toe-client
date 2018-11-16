@@ -21,6 +21,7 @@ const failure = (failureResponse) => {
 
 const signInSuccess = (signInResponse) => {
   store.user = signInResponse.user
+  $('#message').show()
   $('#message').html('You signed in successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
